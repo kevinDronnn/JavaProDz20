@@ -5,6 +5,7 @@ import com.example.javaprodz20.service.OrderServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -18,7 +19,7 @@ public class OrderController {
         return orderService.getOrderById(id);
     }
     @GetMapping()
-    public Iterable<Order> getAllOrders(){
+    public List<Order> getAllOrders(){
         return orderService.getAllOrders();
     }
     @PostMapping()

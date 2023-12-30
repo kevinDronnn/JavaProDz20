@@ -5,6 +5,7 @@ import com.example.javaprodz20.repository.data.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -13,8 +14,8 @@ public class OrderServiceImpl implements OrderService {
     OrderRepository orderRepository;
 
     @Override
-    public Iterable<Order> getAllOrders() {
-        return orderRepository.findAll();
+    public List<Order> getAllOrders() {
+        return (List<Order>) orderRepository.findAll();
     }
 
     @Override
